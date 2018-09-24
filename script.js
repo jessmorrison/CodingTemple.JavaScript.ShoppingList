@@ -13,11 +13,11 @@
 
                 var name = document.getElementById("name").value;
                 var price = document.getElementById("price").value;
-                
+        
                 /* Validation check */
                 
                 if (name == "" || price == "") {
-                    alert("all fields must have input");
+                    alert("all fields must have valid input");
                     return false;
                 }
 
@@ -50,8 +50,8 @@
                 var table = document.getElementById("table"),
                     sumVal = 0;
                 for (var i = 1; i < table.rows.length-1; i++) {
-                    sumVal = sumVal + parseInt(table.rows[i].cells[2].innerHTML);
-                    document.getElementById("totalPrice").innerHTML = sumVal;
+                    sumVal = sumVal + parseFloat(table.rows[i].cells[2].innerHTML);
+                    document.getElementById("totalPrice").innerHTML = sumVal.toFixed(2);
                 }
             }
         }
